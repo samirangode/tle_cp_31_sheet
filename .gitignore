@@ -1,1 +1,41 @@
 misc/program
+
+# Ignore object files and build output
+*.o
+*.obj
+*.exe
+*.out
+*.gch
+*.a
+*.so
+*.dll
+*.dylib
+
+# Ignore core dumps
+core
+
+# Ignore executable files (Linux/macOS, heuristic: files with no extension except your source files)
+# List all possible source and header extensions to avoid ignoring source
+!*.cpp
+!*.cc
+!*.cxx
+!*.c
+!*.h
+!*.hpp
+!*.hh
+!*.hxx
+
+# Ignore all files without extension (may include executables if you name your sources as, e.g., 'main.cpp' -> 'main')
+*
+!*/
+!*.cpp
+!*.h
+
+# Ignore build and bin folders if you use them
+/build/
+/bin/
+
+# Ignore temporary/editor files
+*~
+*.swp
+.DS_Store
