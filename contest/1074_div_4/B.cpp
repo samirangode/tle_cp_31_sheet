@@ -7,21 +7,14 @@ using namespace std;
 void solve(){
 	int n;
 	cin>>n;
-	vector<int> a(n+1);
-	vector<int> num_odd(n+1);
-
+	vector<int> a(n);
+	int maxi = LLONG_MIN;
 	for(int i = 0; i<n; i++){
 		cin>>a[i];
-		num_odd[a[i]] = (i+1)&1;
+		maxi = max(maxi, a[i]);
 	}
+	cout<<maxi*n<<endl;
 
-	for(int i = 2; i<n; i++){
-		if((num_odd[i]==num_odd[i-1]) || (num_odd[i]==num_odd[i+1])){
-			cout<<"NO"<<endl;
-			return;
-		}
-	}
-	cout<<"YES"<<endl;
 }
 
 int32_t main(){
